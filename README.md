@@ -1,6 +1,8 @@
 # gwhere
 
-As in, "Gee, where is that bucket anyways?"
+As in, _"Gee, where is that bucket anyways?"_
+
+Also as in, _"Google, where did I put that bucket?"_
 
 Mini Cli tool to remind you which GCP project a storage bucket is in.
 
