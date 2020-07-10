@@ -1,10 +1,12 @@
-# whereis
+# gwhere
 
-Mini Cli tool to remind you which project a bucket is in.
+As in, "Gee, where is that bucket anyways?"
+
+Mini Cli tool to remind you which GCP project a storage bucket is in.
 
 ## Usage
 
-`whereis <bucket>`
+`gwhere <bucket>`
 
 ### Note:
 

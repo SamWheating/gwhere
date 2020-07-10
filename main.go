@@ -112,4 +112,5 @@ func main() {
 
 	fmt.Printf("Could not find project for bucket gs://%s", bucketName)
 	os.Exit(1)
+
 }
