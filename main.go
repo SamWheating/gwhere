@@ -93,14 +93,13 @@ func confirmBucketExists(bucketName string, projectIDs map[string]bool) {
 			}
 		}
 	}
-	return
 }
 
 func main() {
 
 	if len(os.Args) != 2 {
 		fmt.Printf("Exactly 1 argument required, %d provided\n", len(os.Args)-1)
-		return
+		os.Exit(1)
 	}
 
 	bucketName := os.Args[1]
@@ -111,22 +110,6 @@ func main() {
 
 	confirmBucketExists(bucketName, projectIDs)
 
+	fmt.Printf("Could not find project for bucket gs://%s", bucketName)
 	os.Exit(1)
-
-	// ctx := context.Background()
-	// client, err := storage.NewClient(ctx)
-	// if err != nil {
-	// 	fmt.Printf("error: %s\n", err)
-	// 	return
-	// }
-
-	// attrs, err := client.Bucket(bucketName).Attrs(ctx)
-	// if err != nil {
-	// 	fmt.Printf("error: %s\n", err)
-	// 	return
-	// }
-	// for _, rule := range attrs.ACL {
-	// 	fmt.Println(rule.ProjectTeam.ProjectNumber)
-	// }
-
 }
