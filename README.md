@@ -10,6 +10,12 @@ Mini Cli tool to remind you which GCP project a storage bucket is in.
 
 `gwhere <bucket>`
 
-### Note:
+You'll need `stat` access to the bucket and access to its containg project.
 
-You'll need `stat` access to the bucket and its containg project.
+## Why does this exist?
+
+Previously it took me two `gsutil` / `gcloud` commands to get the project ID of one of my buckets. I had to do this on at least two separate occasions this year so it was becoming a significant time sink. 
+
+## Couldn't this just be done with Bash / gcloud / jq / etc?
+
+Probably, yeah. 
