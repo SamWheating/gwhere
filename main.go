@@ -10,7 +10,8 @@ import (
 	"strings"
 )
 
-// Looks at a bucket's ACLs to find where a bucket might be.
+// Get the project Number from the bucket Metadata
+// For whatever reason this isn't surfaced in the storage API, so we have to use the Resource Manager API 
 func getProjectNumber(bucketName string, ctx context.Context) string {
 
 	service, err := storage.NewService(ctx)
