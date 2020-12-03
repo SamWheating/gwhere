@@ -37,12 +37,11 @@ archives:
 
 project_name: gwhere
 
-
 # Check https://goreleaser.com/customization/homebrew/
 brews:
-  - homepage: 'https://github.com/samwheating/homebrew-samwheating'
-    description: 'Sam Wheating's Homebrew Tap'
-    folder: Formula
+  - folder: Formula
+    homepage: "https://github.com/samwheating/gwhere"
+    description: "Command line tool for finding a GCS bucket's host project"
     commit_author:
       name: gwhere-releaser
       email: samwheating@gmail.com
