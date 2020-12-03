@@ -6,6 +6,15 @@ Also as in, _"Google, where did I put that bucket?"_
 
 Mini Cli tool to remind you which GCP project a storage bucket is in.
 
+## Installation
+
+### With Homebrew:
+
+```
+brew tap samwheating/samwheating
+brew install gwhere
+```
+
 ## Usage
 
 `gwhere <bucket>`
