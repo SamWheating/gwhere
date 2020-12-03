@@ -26,8 +26,8 @@ builds:
       - goarm: mips64
         gomips: hardfloat
     # Run upx after build finished
-    hooks:
-      post: ./upx.sh
+    #hooks:
+    #  post: ./upx.sh
 
 # Check https://goreleaser.com/customization/archive/
 archives:
