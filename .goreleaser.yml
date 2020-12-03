@@ -40,7 +40,7 @@ project_name: gwhere
 
 # Check https://goreleaser.com/customization/homebrew/
 brews:
-  - homepage: 'https://github.com/samwheating/samwheating-homebrew'
+  - homepage: 'https://github.com/samwheating/homebrew-samwheating'
     description: 'Sam Wheating's Homebrew Tap'
     folder: Formula
     commit_author:
