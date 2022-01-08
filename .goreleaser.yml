@@ -1,8 +1,3 @@
-# Check https://goreleaser.com/customization/env/
-env:
-  - GO111MODULE=on
-  - GOPROXY=https://goproxy.io
-
 # Check https://goreleaser.com/customization/hooks/
 before:
   hooks:
@@ -17,21 +12,15 @@ builds:
       - linux
     goarch:
       - amd64
-    ignore:
-      - goos: darwin
-        goarch: 386
-      - goos: linux
-        goarch: arm
-        goarm: 7
-      - goarm: mips64
-        gomips: hardfloat
-    # Run upx after build finished
-    #hooks:
-    #  post: ./upx.sh
+      - arm64
+    flags:
+      - -trimpath
+    ldflags:
+      - -s -w
 
 # Check https://goreleaser.com/customization/archive/
 archives:
-  - name_template: "gwhere_{{ .Version }}_{{ .Os }}_{{ .Arch }}"  
+  - name_template: "gwhere_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
     replacements:
       amd64: x86_64
 
